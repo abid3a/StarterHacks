@@ -7,14 +7,23 @@ body {
     font-weight: 700; /* Use the desired weight */
     margin: 0;
     color: green;
-    
     text-align: center;
     min-height: 100vh; /* Ensures main content takes at least the full viewport height */
-    padding: 20px;
+    padding: 9treepx;
+    cursor:url("cursor-image.png"), auto;
+
 }
-.custom-cursor {
-    cursor: url("/cursor-image.png"), auto; /* Path to your downloaded image */
+.web-title{
+    font-size: 50px;
 }
+.map-title{
+    color:black;
+    font-size:30px;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 0px20px;
+}
+
 
 .navbar {
     display: flex;
@@ -23,6 +32,7 @@ body {
     background-color: green;
     padding: 10px 20px;
     position: relative;
+    justify-content: center;
 }
 
 .navbar .logo a {
@@ -131,3 +141,41 @@ body {
     flex: 1; /* Allows the map to take up remaining space */
     border: 0; /* Remove border from iframe */
 }
+
+h2 {
+    padding-left:30px;
+    padding-right:30px;
+
+}
+
+.box {
+    border-radius:50px;
+    width: 700px;
+    height: 350px;
+    border: 1px solid #9ce677;
+    background-color: #9ce677;
+    padding: 10px;
+    margin: 10px;
+    margin-right: auto;
+  }
+
+
+   
+
+
+h3 {
+    margin-top: 3px;
+    font-size: 50px;
+}
+footer {
+    background: beige;
+    padding: 1em;
+    text-align: center;
+    align-items: flex-end;
+}
+footer p{
+    margin: 0;
+}
+  
+
+
