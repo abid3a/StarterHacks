@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoGaze</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>FAQ Section</title>
+    <style>
+        section[id="Testimonies2"] h2 {
+            text-align: center;
+            padding-left: 15px;
+            font-size: 1.45rem;
+            color: darkgreen;
+        }
+         .FAQ {
+            text-align: center;
+            padding-right: 0px;
+            font-size: 2.5rem;
+        }
+        section[id="Testimonies1"] h2 {
+            text-align: center;
+            padding-left: 15px;
+            font-size: 1.45rem;
+            color: darkgreen;
+        }
+     .faq-container {
+        
+            max-width: 600px;
+            margin: auto;
+            padding: 10px;
+        }
+
+
+    .faq-question {
+            border-radius: 18px;
+            background-color: darkgreen; /*#f1f1f1*/
+            cursor: pointer;
+            padding: 15px;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s;
+            width: 100%;
+            text-align: left;
+            font-size: 18px;
+            font-family:poppins;
+            font-weight: 700;
+            color: beige;
+            border-bottom: 1px solid darkgreen; /*#ddd*/
+            
+        }
+
+    .faq-answer {
+            padding: 15px;
+            display: none;
+            
+            background-color: #e3fae3;
+            border-bottom: 1px solid #ddd;
+            font-size: 16px;
+            color: #008000;
+        }
+
+    .faq-question.active + .faq-answer {
+            display: block;
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div class="tite-container">
+        <h1 class="web-title"><big>EcoGaze</big></h1>
+    </div>
+    <script src="script.js"></script>
+    
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html" target="_self">Home</a></li>
+            <li><a href="map.html" target="_self">Map</a></li>
+            <li><a href="initiatives.html" target="_self">Local Initiatives</a></li>
+            <li><a href="resources.html" target="_self">Resources</a></li>
+        </ul>
+        <div class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+    </nav>  
+     
+
+    <section id = "Testimonies1">
+       
+        <h2>Climate Grief and Well-being Journal</h2>
+        <button id="pdf-button1" >View PDF</button>
+
+        <script>
+            document.getElementById('pdf-button1').addEventListener('click', function() {
+                window.location.href = '/climate_grief_journaling_activity.pdf';
+            });
+        </script>
+    </section>
+    <section id="Testimonies2">
+        <h2>Mental Health Support</h2>
+        <button id="pdf-button2" >View PDF</button>
+
+        <script>
+            document.getElementById('pdf-button2').addEventListener('click', function() {
+                window.location.href = '/mentalhealth.pdf';
+            });
+        </script>
+    </section>
+
+    <div class="faq-container">
+        <h2 class="FAQ">FAQ Questions</h2>
+        <button class="faq-question">What are some symptoms of climate anxiety?</button>
+        <div class="faq-answer">
+            Feelings of worry, fear, and helplessness are often experienced by some individuals in response to the climate crisis and environmental issues.
+        </div>
+
+        <button class="faq-question">What can I recycle on campus?</button>
+        <div class="faq-answer">
+            You can typically recycle paper products, plastics, glass, metal, milk or juice cartons, and batteries. 
+        </div>
+
+        <button class="faq-question">How can I reduce my paper usage in my studies?</button>
+        <div class="faq-answer">
+            Here are some tips for reducing paper usage: utilize digital tools and platforms for taking notes, and reading, use online resources, print wisely using double-sided printing, and reuse GOOS paper. 
+        </div>
+
+        <button class="faq-question">What are the benefits of using reusable products?</button>
+        <div class="faq-answer">
+            Reusable products help reduce waste and decrease the amount of single-use items, reducing pollution and litter. Reusable products are also often made from safer and non-toxic materials, reducing exposure to hazardous substances. Most reusable products also are typically designed to be more durable than disposable products. 
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                const answer = button.nextElementSibling;
+                if (button.classList.contains('active')) {
+                    answer.style.display = 'block';
+                } else {
+                    answer.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <img src="https://i.pinimg.com/originals/6f/ae/f5/6faef57d17d7ecc3657e3a3d4aadc52f.gif" height="200" width="200" alt="Bushes">
+</body>
+<nav class="navbar2">
+    <div class="chatbox">
+        <h1>Chat with us!</h1>
+        <p>Do you have any ideas for how to address a climate anxiety that youth are currently facing?</p>
+        <input type="text" id="userInput" placeholder="Type your response here...">
+        <button onclick="sendMessage()"style="background-color: green; color: white;">Send</button>
+        <p class="message" id="responseMessage"></p>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var userInput = document.getElementById('userInput').value;
+            if (userInput.trim() !== "") {
+                document.getElementById('responseMessage').innerText = "Sent, thank you for your response!";
+                document.getElementById('userInput').value = ""; // Clear the input field
+            } else {
+                document.getElementById('responseMessage').innerText = "Please enter a response.";
+            }
+        }
+    </script>
+    
+</nav>
+<footer>
+    <p>
+        2024 © EcoGaze
+    </p>
+</footer>
+</html>

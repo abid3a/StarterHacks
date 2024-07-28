@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="cursor-image.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoGaze</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    
+    
+    
+</head>
+<body>
+    <div class="tite-container">
+        <h1 class="web-title"><big>EcoGaze</big></h1>
+    </div>
+    <script src="script.js"></script>    <nav class="navbar">
+        <ul class="nav-links">  
+            <li><a href="index.html" target="_self">Home</a></li>
+            <li><a href="map.html" target="_self">Map</a></li>
+            <li><a href="initiatives.html" target="_self">Local Initiatives</a></li>
+            <li><a href="resources.html" target="_self">Resources</a></li>
+        </ul>
+    
+        <div class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <h1 style="color: green;" class="map-title"><big>Waterloo Campus Sustainability Map</big></h1>
+    
+  
+    <div class="map-align">
+        <div class="boxLegend">
+          <div class="legend">
+            <h2 style="color: white;">Legend</h2>
+            <ul>
+                <li>
+                    <span><img class="legend-icon" src="https://i.imgur.com/fVmwCkU.png"></span>
+                    <span style="color: white;" class="legend-text">Greenspaces</span>
+                </li>
+                <li>
+                    <span><img class="water-icon" src="https://i.imgur.com/WiEOrgS.png"></span>
+                    <span style="color: white;" class="legend-text">Water Fountains</span>
+                </li>
+                <li>
+                    <span><img class="legend-icon" src="https://i.imgur.com/ry5CDp6.png"></span>
+                    <span style="color: white;" class="legend-text">Recycling Station</span>
+                </li>
+                <li>
+                    <span><img class="legend-icon" src="https://i.imgur.com/I3AF6Px.png"></span>
+                    <span style="color: white;" class="legend-text">Green Roof</span>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <iframe class="map-display" src="https://www.google.com/maps/d/embed?mid=17wv-7V9Mu8OkQGCjELN3KSK87vSuYYM&ehbc=2E312F" width="640" height="480"></iframe>
+    </div>
+
+    <p class="mapText">Use this map to explore Waterloo's local greenspaces and discover environmental efforts within our community</p>
+    <img src="UW.png" height = "200" width = "740" alt="Waterloo">
+ 
+    
+</body>
+<nav class="navbar2">
+    <div class="chatbox">
+        <h1>Chat with us!</h1>
+        <p>Do you have any ideas for how to address a climate anxiety that youth are currently facing?</p>
+        <input type="text" id="userInput" placeholder="Type your response here...">
+        <button onclick="sendMessage()"style="background-color: green; color: white;">Send</button>
+        <p class="message" id="responseMessage"></p>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var userInput = document.getElementById('userInput').value;
+            if (userInput.trim() !== "") {
+                document.getElementById('responseMessage').innerText = "Sent, thank you for your response!";
+                document.getElementById('userInput').value = ""; // Clear the input field
+            } else {
+                document.getElementById('responseMessage').innerText = "Please enter a response.";
+            }
+        }
+    </script>
+    
+</nav>
+<footer>
+    <p>
+        2024 © EcoGaze
+    </p>
+</footer>
+</html>
